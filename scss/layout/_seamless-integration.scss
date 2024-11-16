@@ -1,0 +1,40 @@
+@use "../mixins/mixins";
+@use "../variables/colors";
+
+.seamless-integration {
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        gap: 112px;
+    }
+
+    &__info {
+        width: 400px;
+    }
+
+    &__title {
+        font-family: Roboto;
+        font-size: 72px;
+        font-weight: 400;
+        line-height: 72px;
+        letter-spacing: 0.4000000059604645px;
+        color: $PRIMARY-COLOR-dark-blue;
+
+    }
+
+    &__details {
+        margin-top: 30px;
+        font-family: Work Sans;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 28px;
+        color: $PRIMARY-COLOR-dark-blue;
+
+    }
+
+    &__btn {
+        margin-top: 18.56px;
+        @include btn($padding: 14px 21px 16px 21px);
+    }
+}
+

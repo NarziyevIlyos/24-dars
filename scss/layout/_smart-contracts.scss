@@ -1,0 +1,188 @@
+@use "../mixins/mixins";
+@use "../variables/colors";
+
+/* collaborator section */
+
+.smart-contracts {
+  background-color: #013a4c;
+  padding: 80px 0px 128px 0px;
+
+  .business-flow {
+
+    &__title {
+      color: $SECONDARY-COLOR-white;
+      font-family: Roboto;
+      font-size: 25px;
+      font-weight: 400;
+      letter-spacing: 0.7px;
+      text-align: center;
+    }
+    &__companies {
+      margin: 0 auto;
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    &__company {
+      transition: all 0.3s ease-in-out;
+    }
+
+    &__company:hover {
+      transform: scale(1.4);
+    }
+  }
+}
+
+
+.turn-signatures {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+
+  &__info {
+    width: 528px;
+  }
+  &__title {
+    font-family: Roboto;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: 0.4px;
+    color: #f2dce4;
+    width: 350px;
+  }
+  &__details {
+    margin-top: 38px;
+    font-family: Work Sans;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $SECONDARY-COLOR-white;
+  }
+  
+ 
+  
+  &__img {
+    position: relative;
+    bottom: 103px;
+  }
+
+}
+
+#turn-signatures__btn {
+  margin-top: 20px;
+  padding: 14px 21px 16px 14px;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: $btn-bg-color;
+  border: none;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $PRIMARY-COLOR-dark-blue;
+    border: 1px solid $btn-bg-color;
+    color: $btn-bg-color;
+  }
+
+  &:active {
+    background-color: green;
+    color: white;
+  }
+}
+
+.collaborate {
+  padding: 33px 96px;
+  width: 1152;
+  border: 2px solid blue;
+  border-radius: 10px;
+  background-color: $collaborate-bg-color;
+  position: relative;
+  
+  &-items {
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+    // gap: 110px;
+    padding-bottom: 33px;
+    border-bottom: 1px solid #94B4C2;
+  }
+  &-items .collaborate-item a {
+    display: grid;
+    place-items: center;
+    transition: all 0.4s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:hover .text {
+      color: rgb(207, 87, 179);
+    }
+  }
+
+  &-item .text {
+    text-transform: capitalize;
+    margin-top: 7px;
+    font-family: Work Sans;
+    font-size: 18px;
+    font-weight: 400;
+    color: $PRIMARY-COLOR-dark-blue;
+  }
+ 
+
+  &-wrapper {
+    margin-top: 37px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-info {
+    width: 545px;
+  }
+  &-title {
+    text-transform: capitalize;
+    font-family: Roboto;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0.699999988079071px;
+    color: $PRIMARY-COLOR-dark-blue;
+  }
+  &-details {
+    margin-top: 11px;
+    font-family: Work Sans;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $PRIMARY-COLOR-dark-blue;
+  }
+  &-links {
+    margin-top: 56px;
+  }
+  &-link a {
+    display: flex;
+    gap: 8px;
+  }
+
+  &-link .text {
+    color: $PRIMARY-COLOR-dark-blue;
+  }
+  &-btn {
+    margin-top: 32px;
+  }
+  &-btn .btn {
+    @include btn($bg: $collaborate-bg-color, $border-color: $btn-border-color);
+  }
+  &-wrapper .collaborate-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+}
+/* collaborator section */

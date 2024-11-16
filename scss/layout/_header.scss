@@ -1,0 +1,72 @@
+@use "../variables/colors";
+@use "../mixins/mixins";
+
+.header {
+  padding: 21px 48px;
+}
+.nav {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-logo {
+  }
+
+  &-items {
+    padding: 0px 48px 0px 0px;
+    display: flex;
+    gap: 32px;
+  }
+
+  &-links {
+    padding: 0px 16px;
+    display: flex;
+    gap: 32px;
+  }
+
+  &-link {
+    position: relative;
+  }
+
+  &-link .text {
+    @include nav-link-text;
+    font-size: 16px;
+    transition: all 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: purple;
+      width: 0;
+      height: 3px;
+      bottom: -3px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    &:hover::after {
+      width: 100%;
+      transition: all 0.3s;
+    }
+  }
+
+  &-demo .btn {
+    @include btn;
+  }
+
+  &-log-in .btn {
+    @include btn($border-color: $btn-border-color, $bg: $SECONDARY-COLOR-white);
+  }
+
+  &-links-right {
+    display: flex;
+    gap: 8px;
+
+    & .text {
+      color: $PRIMARY-COLOR-dark-blue;
+      font-size: 14px;
+    }
+  }
+}

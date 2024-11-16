@@ -1,0 +1,123 @@
+@use "../mixins/mixins";
+@use "../variables/colors";
+
+.footer {
+    width: 1440px;
+    padding: 64px 0px;
+    background-color: $PRIMARY-COLOR-dark-blue;
+    margin: 0 auto;
+
+    &-1 {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 72px;
+        border-bottom: 1px solid #346170;;
+        
+        &__links-wrapper {
+            display: flex;
+            gap: 102px;
+        }
+    }
+
+    &-headquarter__info {
+        margin-top: 67px;
+        font-family: Work Sans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $SECONDARY-COLOR-white;
+    }
+
+    &-link {
+        margin-top: 13px;
+
+        &:hover .text {
+            color: $SECONDARY-COLOR-white;
+        }
+    }
+
+    &-link .text {
+        font-family: Work Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $footer-special-link-color;
+
+      
+    }
+
+    &-title-link .text {
+        color: $SECONDARY-COLOR-white;
+
+        &:hover {
+            color: $btn-bg-color;
+        }
+    }
+
+    &-2 {
+        padding-top: 49px;
+        padding-bottom: 80px;
+        border-bottom: 1px solid #346170;;
+    
+        .get-in-the-flow {
+            display: flex;
+            gap: 48px;
+
+            &__title {
+                font-family: Roboto;
+                font-size: 23px;
+                font-weight: 400;
+                line-height: 32px;
+                letter-spacing: 0.4px;
+                color: $SECONDARY-COLOR-white;
+            }
+
+            &__details {
+                font-family: Work Sans;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                color: $SECONDARY-COLOR-white;
+            }
+
+            &__btn {
+                @include btn();
+            }
+        }
+
+    }
+
+    &-3 {
+        margin-top: 17.23px;
+
+        .sub-links-footer {
+            display: flex;
+            gap: 32px;
+
+            &__link .text {
+                font-family: Work Sans;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 18px;
+                color: #99B0B7;
+
+                &:hover {
+                    color: $SECONDARY-COLOR-white;
+                }
+            }
+        }
+    }
+}
+
+#important-links .text:hover {
+    color: $btn-bg-color;
+}
+
+#important-links .text {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $SECONDARY-COLOR-white;
+}
+

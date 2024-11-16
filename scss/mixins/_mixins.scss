@@ -1,0 +1,32 @@
+@mixin btn(
+  $border-color: #ffd063,
+  $border-radius: 4px,
+  $padding: 11px 17px,
+  $bg: #ffd063,
+  $color: #013a4c
+) {
+  border-radius: $border-radius;
+  border: 1px solid;
+  border-color: $border-color;
+  padding: $padding;
+  background-color: $bg;
+  color: $color;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: $PRIMARY-COLOR-dark-blue;
+    color: $btn-bg-color;
+  }
+
+  &:active {
+    background-color: green;
+    color: white;
+  }
+}
+
+@mixin nav-link-text {
+  color: $PRIMARY-COLOR-dark-blue;
+  font-weight: 400px;
+  font-family: Work Sans;
+}

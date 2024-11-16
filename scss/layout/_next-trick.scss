@@ -1,0 +1,207 @@
+@use "../mixins/mixins";
+@use "../variables/colors";
+
+.next-trick {
+  margin-top: 69px;
+  padding-bottom: 48px;
+
+  &__title {
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 54px;
+    letter-spacing: 0.4px;
+    color: $PRIMARY-COLOR-dark-blue;
+  }
+
+  &__wrapper {
+    margin-top: 48.44px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__basic-guide {
+    border-radius: 8px;
+    background-color: #f2dce4;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__basic-guide__info {
+    padding: 48.44px 32px 129px 32px;
+  }
+
+  &__basic-guide__info-btn {
+    @include btn($padding: 4px 8px 6px 8px, $bg: $btn-article__bg-color);
+    border-radius: 2px;
+    font-size: 11px;
+    color: $btn-guide__bg-color;
+    border: none;
+
+    &:hover {
+      background-color: $btn-bg-color;
+      color: $PRIMARY-COLOR-dark-blue;
+    }
+  }
+
+  &__basic-guide__info-title {
+    width: 448px;
+    margin-top: 63px;
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: 0.4px;
+    color: $PRIMARY-COLOR-dark-blue;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 24px;
+ 
+  }
+
+  &__cards .card {
+    width: 368px;
+    background-color: $PRIMARY-COLOR-dark-blue;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    &:hover .card-hover {
+      top: 0px;
+    }
+  }
+
+  & .card-header {
+    display: grid;
+    place-items: center;
+  }
+  .card-img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .card-body {
+    padding: 24.45px 57px 24.45px 24px;
+  }
+
+   & .card-hover {
+      // top:0;
+      width: 100%;
+      height: 100%;
+      top: 100%;
+      position: absolute;
+      display: grid;
+      place-items: center;
+      background-color: #0f5987;
+      transition: 0.6s ease-in-out;
+    }
+  .card-hover__btn {
+    margin-top: 24.44px;
+    font-family: Work Sans;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 11px;
+    padding: 4px 8px 6px 8px;
+    color: $SECONDARY-COLOR-white;
+  }
+  .card-hover__title {
+    margin-top: 107px;
+    color: $SECONDARY-COLOR-white;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+  }
+  .card-hover__btn-full-story {
+    margin-top: 116px;
+    margin-bottom: 88px;
+    padding: 11px 17px;
+
+    background-color: #0f5987;
+    color: $SECONDARY-COLOR-white;
+    border: 1px solid $SECONDARY-COLOR-white;
+    border-radius: 4px;
+    font-family: Work Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &__cards .card-btn {
+    @include btn(
+      $padding: 4px 8px 6px 8px,
+      $bg: $btn-guide__bg-color,
+      $color: $PRIMARY-COLOR-dark-blue
+    );
+    font-size: 11px;
+    border: none;
+
+    &:hover {
+      background-color: $btn-bg-color;
+      color: $PRIMARY-COLOR-dark-blue;
+    }
+  }
+
+  .card-title {
+    margin-top: 18px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.4px;
+    color: $SECONDARY-COLOR-white;
+  }
+
+  .card-links {
+    margin-top: 70px;
+    display: flex;
+    gap: 17px;
+  }
+  .card-link-1 .text {
+    border-right: 1px solid $SECONDARY-COLOR-white;
+  }
+  .card-link .text {
+    padding-right: 4px;
+    font-family: Work Sans;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $SECONDARY-COLOR-white;
+  }
+
+  #card-3 {
+    background-color: $btn-guide__bg-color;
+
+    & .card-btn {
+      @include btn($color: #f2dce4, $bg: $btn-article__bg-color);
+      border: none;
+      font-size: 11px;
+      padding: 4px 8px 6px;
+      width: 51px;
+
+      &:hover {
+        background-color: $btn-bg-color;
+        color: $PRIMARY-COLOR-dark-blue;
+      }
+    }
+
+    & .card-title {
+      color: $PRIMARY-COLOR-dark-blue;
+    }
+
+    & .text {
+      color: $PRIMARY-COLOR-dark-blue;
+    }
+
+    & .card-links {
+      margin-top: 37.55px;
+    }
+
+    & .card-link-1 .text {
+      border-right: 1px solid $PRIMARY-COLOR-dark-blue;
+    }
+  }
+}

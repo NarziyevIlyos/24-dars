@@ -1,0 +1,18 @@
+@use "../variables/colors";
+
+body {
+    background-color: $SECONDARY-COLOR-white ;
+}
+
+section {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: inherit;
+}
